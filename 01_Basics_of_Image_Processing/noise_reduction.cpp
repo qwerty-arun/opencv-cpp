@@ -36,13 +36,13 @@ int main(){
     medianBlur(image1, medianBlurImg, 9);
     GaussianBlur(image1, gaussianBlurImg, Size(1, 1), 9, 9);
 
-    // imshow("Original Image", image1);
-    // imshow("Median Blurred Image", medianBlurImg);
-    // imshow("Gaussian Blurred Image", gaussianBlurImg);
-
     imshow("Original Image", image1);
-    imshow("HSV Image", hsvImg);
-    imshow("Threshold Image", imgThreshold);
+    imshow("Median Blurred Image", medianBlurImg);
+    imshow("Gaussian Blurred Image", gaussianBlurImg);
+
+    // imshow("Original Image", image1);
+    // imshow("HSV Image", hsvImg);
+    // imshow("Threshold Image", imgThreshold);
 
     int k = waitKey(0);
 
