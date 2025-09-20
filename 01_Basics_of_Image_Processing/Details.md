@@ -80,7 +80,9 @@ Because your images are **8-bit, 3-channel color** (`CV_8UC3`) by default when l
 
 Do you want me to show you a **small experiment in code** to print the type of a `cv::Mat` so you can confirm whether it’s `CV_8UC3`, `CV_8UC1`, etc.? That way you’ll know what to use instead of guessing.
 
-## Code to print matrix type
+---
+
+### 🔹 Code to print matrix type
 
 ```cpp
 #include <opencv2/core.hpp>
@@ -109,9 +111,120 @@ std::string type2str(int type) {
 
     return r;
 }
-
-int main(){
-    cv::Mat image = cv::imread("D:/opencv-cpp/light.png", cv::IMREAD_COLOR)
-    std::cout << "Image type: " << type2str(image.type()) << std::endl;
-}
 ```
+
+---
+
+### 🔹 How to use it
+
+Inside your `main()` after loading the image, write:
+
+```cpp
+std::cout << "Image1 type: " << type2str(image1.type()) << std::endl;
+std::cout << "Image2 type: " << type2str(image2.type()) << std::endl;
+```
+
+---
+
+### 🔹 Example output
+
+* For a normal color image (`IMREAD_COLOR`):
+
+```
+Image1 type: 8UC3
+Image2 type: 8UC3
+```
+
+* For grayscale:
+
+```
+Image type: 8UC1
+```
+
+* For float image:
+
+```
+Image type: 32FC3
+```
+
+---
+
+👉 Now, once you know the type:
+
+* `8UC1` → `uchar`
+* `8UC3` → `cv::Vec3b`
+* `16UC3` → `cv::Vec3w`
+* `32FC3` → `cv::Vec3f`
+
+---
+
+Do you want me to also show you a **shortcut trick using `CV_MAT_DEPTH` and `CV_MAT_CN`** instead of this long function, so you can quickly check type in just a few lines?
+
+- OpenCV encodes the type of a `cv::Mat` (depth + channels) into an integer. You can extract them directly with macros:
+
+---
+
+### 🔹 Quick Type Check
+
+```cpp
+int type = image.type();
+int depth = CV_MAT_DEPTH(type);
+int channels = CV_MAT_CN(type);
+
+std::cout << "Depth: " << depth << ", Channels: " << channels << std::endl;
+```
+
+---
+
+### 🔹 Depth values meaning
+
+The `depth` will be one of these constants:
+
+| Value | Constant | Meaning             | C++ type |
+| ----- | -------- | ------------------- | -------- |
+| 0     | CV_8U   | 8-bit unsigned int  | `uchar`  |
+| 1     | CV_8S   | 8-bit signed int    | `schar`  |
+| 2     | CV_16U  | 16-bit unsigned int | `ushort` |
+| 3     | CV_16S  | 16-bit signed int   | `short`  |
+| 4     | CV_32S  | 32-bit signed int   | `int`    |
+| 5     | CV_32F  | 32-bit float        | `float`  |
+| 6     | CV_64F  | 64-bit float        | `double` |
+
+---
+
+### 🔹 Example
+
+If you load with `cv::imread(path, cv::IMREAD_COLOR);`:
+
+```
+Depth: 0, Channels: 3
+```
+
+* `0` = `CV_8U` → 8-bit unsigned → `uchar`.
+* `3` = 3 channels → `Vec3b`.
+
+So your pixels are `cv::Vec3b`. ✅
+
+---
+
+If grayscale:
+
+```
+Depth: 0, Channels: 1
+```
+
+→ That means `uchar` pixels.
+
+If float image (`CV_32FC3`):
+
+```
+Depth: 5, Channels: 3
+```
+
+→ That means `Vec3f`.
+
+---
+
+👉 This shortcut is useful if you just want to **debug** what type of image you’re working with, without writing the big `type2str()` function.
+
+---
