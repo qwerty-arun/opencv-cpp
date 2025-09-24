@@ -1,4 +1,4 @@
-// Apply Canny Edge Detection
+// Crop a Region of Interest
 
 #include <opencv2/opencv.hpp>
 #include <iostream>
@@ -6,7 +6,7 @@
 
 int main() {
     std::string inputPath = "D:/opencv-cpp/images/light.png";
-    std::string outputPath = "D:/opencv-cpp/images/edges_image.png";
+    std::string outputPath = "D:/opencv-cpp/images/cropped_image.png";
 
     cv::Mat image = cv::imread(inputPath, cv::IMREAD_COLOR);
 
@@ -15,18 +15,17 @@ int main() {
         return -1;
     }
 
-    cv::Mat edges;
-    cv::Canny(image, edges, 50, 150);
+    cv::Mat cropped = image(cv::Rect(500, 500, 300, 300)); //Rect(x, y, width, height)
 
     cv::imshow("Original Image", image);
-    cv::imshow("Edge Detection", edges);
+    cv::imshow("Cropped Image", cropped);
     cv::waitKey(0);
     cv::destroyAllWindows();
 
-    bool success = cv::imwrite(outputPath, edges);
+    bool success = cv::imwrite(outputPath, cropped);
 
     if (success) {
-        std::cout << "Image saved successfully as: " << outputPath << std::endl;
+        std::cout << "Cropped Image saved successfully as: " << outputPath << std::endl;
     } else {
         std::cerr << "Error: Failed to save the image. Possible issues include invalid path or permissions." << std::endl;
         return -1;

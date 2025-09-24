@@ -5,11 +5,11 @@
 - [x] Load, display, and save an image.
 - [x] Convert to grayscale.
 - [x] Resize and rotate an image.
-- [ ] Crop a region of interest (ROI).
-- [ ] Draw lines, circles, rectangles, and text on an image.
-- [ ] Blend two images (addWeighted).
-- [ ] Apply Gaussian blur, median blur.
-- [ ] Edge detection (Canny).
+- [x] Crop a region of interest (ROI).
+- [x] Draw lines, circles, rectangles, and text on an image.
+- [x] Blend two images (addWeighted).
+- [x] Apply Gaussian blur, median blur.
+- [x] Edge detection (Canny).
 
 ## 🟡 Intermediate (Image Processing)
 
