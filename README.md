@@ -10,6 +10,9 @@
 - [x] Blend two images (addWeighted).
 - [x] Apply Gaussian blur, median blur.
 - [x] Edge detection (Canny).
+- [x] Print individual pixel values.
+- [x] Split color image to BGR.
+- [x] Flip images.
 
 ## 🟡 Intermediate (Image Processing)
 
