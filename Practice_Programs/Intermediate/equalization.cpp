@@ -11,7 +11,7 @@ int main()
 {
     string image_path1 = "D:/opencv-cpp/images/house_dark.webp";
 
-    Mat image1 = imread(image_path1, IMREAD_GRAYSCALE);
+    Mat image1 = imread(image_path1, IMREAD_COLOR);
     resize(image1, image1, { 500,500 }, 0, 0, cv::INTER_NEAREST);
 
     Mat histEqualized;

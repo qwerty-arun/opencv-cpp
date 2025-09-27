@@ -16,7 +16,9 @@
 
 ## 🟡 Intermediate (Image Processing)
 
-- [ ] Histogram calculation and equalization.
+- [x] Histogram calculation for grayscale images.
+- [x] Histogram calculation for color images.
+- [x] Equalisation calculation.
 - [ ] Thresholding (simple, adaptive, Otsu).
 - [ ] Morphological operations (erosion, dilation, opening, closing).
 - [ ] Detect and draw contours.
