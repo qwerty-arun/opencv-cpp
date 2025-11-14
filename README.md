@@ -21,7 +21,7 @@
 - [x] Equalisation calculation.
 - [x] Thresholding (simple, adaptive, Otsu).
 - [x] Morphological operations (erosion, dilation, opening, closing).
-- [ ] Detect and draw contours.
+- [x] Detect and draw contours.
 - [ ] Image pyramids (pyrUp, pyrDown).
 - [ ] Perspective transform (warp image).
 - [ ] Color detection using HSV (detect red, green, blue objects).
