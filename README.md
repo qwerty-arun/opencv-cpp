@@ -19,7 +19,7 @@
 - [x] Histogram calculation for grayscale images.
 - [x] Histogram calculation for color images.
 - [x] Equalisation calculation.
-- [ ] Thresholding (simple, adaptive, Otsu).
+- [x] Thresholding (simple, adaptive, Otsu).
 - [ ] Morphological operations (erosion, dilation, opening, closing).
 - [ ] Detect and draw contours.
 - [ ] Image pyramids (pyrUp, pyrDown).
@@ -42,23 +42,23 @@
 
 ### **1. Image Filters & Transformations**
 
-* Gaussian blur, sharpening, edge detection (Canny, Sobel)
-* Rotate/scale/crop
-* Convert RGB ↔ HSV ↔ Gray
+- Gaussian blur, sharpening, edge detection (Canny, Sobel)
+- Rotate/scale/crop
+- Convert RGB ↔ HSV ↔ Gray
   **Skills:** Mat operations, basic image pipeline
   **Add-ons:** Implement your own convolution kernel.
 
 ### **2. Real-time Webcam Effects**
 
-* Cartoon effect
-* Pencil sketch effect
-* Background color swapping
+- Cartoon effect
+- Pencil sketch effect
+- Background color swapping
   **Skills:** VideoCapture, frame-by-frame pipeline.
 
 ### **3. Color Detection & Object Tracking**
 
-* Track red objects using HSV thresholding
-* Draw bounding boxes / contours
+- Track red objects using HSV thresholding
+- Draw bounding boxes / contours
   **Skills:** Thresholding, morphology, contour detection.
 
 ---
@@ -67,32 +67,32 @@
 
 ### **4. Motion Detection & Object Counting**
 
-* Use frame-differencing or MOG2 background subtractor
-* Count vehicles/people passing ROI
+- Use frame-differencing or MOG2 background subtractor
+- Count vehicles/people passing ROI
   **Skills:** Background subtraction, contours, filtering noise.
 
 ### **5. Face & Eye Detection (Haar / DNN)**
 
-* Viola–Jones classifiers
-* Or DNN-based SSD models
+- Viola–Jones classifiers
+- Or DNN-based SSD models
   **Skills:** Feature detection + DNN inference.
 
 ### **6. Lane Detection for Self-Driving Cars**
 
-* Canny edges → Hough lines
-* Perspective transform
+- Canny edges → Hough lines
+- Perspective transform
   **Skills:** Image processing + geometry
   **Add-on:** PID to keep virtual car in lane.
 
 ### **7. Basic OCR Pipeline (without Tesseract)**
 
-* Extract characters using contour segmentation
-* Recognize digits using k-NN / SVM
+- Extract characters using contour segmentation
+- Recognize digits using k-NN / SVM
   **Skills:** Preprocessing, machine learning basics.
 
 ### **8. Shape Detection**
 
-* Identify triangles, rectangles, circles in real time
+- Identify triangles, rectangles, circles in real time
   **Skills:** Contours, approxPolyDP, Hough Circles.
 
 ---
@@ -101,42 +101,42 @@
 
 ### **9. Real-Time Object Detector (YOLO + OpenCV DNN)**
 
-* Use pretrained YOLOv3/v4
-* Build a clean C++ inference pipeline
+- Use pretrained YOLOv3/v4
+- Build a clean C++ inference pipeline
   **Skills:** DNN, threading, GPU acceleration.
 
 ### **10. Gesture Recognition Using Hand Tracking**
 
-* Skin segmentation or MediaPipe hand landmarks
-* Recognize “swipe”, “zoom”, “grab” gestures
+- Skin segmentation or MediaPipe hand landmarks
+- Recognize “swipe”, “zoom”, “grab” gestures
   **Skills:** Tracking + temporal analysis.
 
 ### **11. Vehicle Detection & Speed Estimation**
 
-* Detect cars using HOG + SVM / YOLO
-* Track with Kalman filter
-* Estimate speed using pixel → real-world mapping
+- Detect cars using HOG + SVM / YOLO
+- Track with Kalman filter
+- Estimate speed using pixel → real-world mapping
   **Skills:** Tracking, filtering, calibration.
 
 ### **12. SLAM (Semi-Minimal Version)**
 
-* Feature extraction (ORB/SIFT)
-* Feature matching (FLANN/BruteForce)
-* Estimate camera motion using Essential Matrix
+- Feature extraction (ORB/SIFT)
+- Feature matching (FLANN/BruteForce)
+- Estimate camera motion using Essential Matrix
   **Skills:** Epipolar geometry + robotics CV.
 
 ### **13. Augmented Reality Marker Tracking**
 
-* Detect ArUco markers
-* Estimate camera pose
-* Overlay 3D cube on them
+- Detect ArUco markers
+- Estimate camera pose
+- Overlay 3D cube on them
   **Skills:** pose estimation, camera calibration.
 
 ### **14. License Plate Detection & Character Segmentation**
 
-* Edge-based plate extraction
-* Morphology for isolation
-* Segment individual characters
+- Edge-based plate extraction
+- Morphology for isolation
+- Segment individual characters
   **Skills:** end-to-end pipeline + useful application.
 
 ---
@@ -145,26 +145,27 @@
 
 ### **15. Multi-Object Tracking (DeepSORT-style)**
 
-* Combine YOLO → Kalman → Hungarian algorithm
+- Combine YOLO → Kalman → Hungarian algorithm
   **Skills:** Real-world tracking pipeline.
 
 ### **16. Stereo Vision Depth Map**
 
-* Calibrate two cameras
-* Build disparity map
-* Real-world depth estimation
+- Calibrate two cameras
+- Build disparity map
+- Real-world depth estimation
   **Skills:** 3D reconstruction.
 
 ### **17. Optical Flow-based Pedestrian Tracking**
 
-* Lucas-Kanade / Farneback
-* Reidentify moving objects
+- Lucas-Kanade / Farneback
+- Reidentify moving objects
   **Skills:** motion vectors + tracking.
 
 ### **18. Image Stitching (Panorama)**
 
-* Use SIFT/ORB for matching
-* RANSAC for homography
-* Warp + blend images
+- Use SIFT/ORB for matching
+- RANSAC for homography
+- Warp + blend images
   **Skills:** projective transforms, blending.
+
 ---

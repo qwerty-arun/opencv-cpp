@@ -1,4 +1,3 @@
-// threshold_refactor.cpp
 #include <opencv2/opencv.hpp>
 #include <iostream>
 #include <stdexcept>
