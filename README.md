@@ -20,7 +20,7 @@
 - [x] Histogram calculation for color images.
 - [x] Equalisation calculation.
 - [x] Thresholding (simple, adaptive, Otsu).
-- [ ] Morphological operations (erosion, dilation, opening, closing).
+- [x] Morphological operations (erosion, dilation, opening, closing).
 - [ ] Detect and draw contours.
 - [ ] Image pyramids (pyrUp, pyrDown).
 - [ ] Perspective transform (warp image).
