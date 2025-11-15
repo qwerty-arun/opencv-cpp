@@ -23,7 +23,7 @@
 - [x] Morphological operations (erosion, dilation, opening, closing).
 - [x] Detect and draw contours.
 - [x] Image pyramids (pyrUp, pyrDown).
-- [ ] Perspective transform (warp image).
+- [x] Perspective transform (warp image).
 - [ ] Color detection using HSV (detect red, green, blue objects).
 
 ## 🔵 Advanced (Computer Vision & Fun Projects)
