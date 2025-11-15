@@ -22,7 +22,7 @@
 - [x] Thresholding (simple, adaptive, Otsu).
 - [x] Morphological operations (erosion, dilation, opening, closing).
 - [x] Detect and draw contours.
-- [ ] Image pyramids (pyrUp, pyrDown).
+- [x] Image pyramids (pyrUp, pyrDown).
 - [ ] Perspective transform (warp image).
 - [ ] Color detection using HSV (detect red, green, blue objects).
 
